@@ -8,7 +8,13 @@ router.get('/', (req, res) => {
     res.status(200).json({ message: 'Welcome to the API' })
 });
 
+
+
 router.post('/create', (req, res) => {
+    // If no token, send to login page
+    res.status(201).json({success:true,user:req.body })
+});
+router.post('/demo', (req, res) => {
     // If no token, send to login page
     res.status(201).json({success:true,user:req.body })
 });

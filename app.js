@@ -11,7 +11,7 @@ app.use(require('morgan')("tiny"))
 app.use(express.json()); // middleware for parsing json
 app.use(express.urlencoded( {extended : true} )); //middle
 
-//userRouter
+//userRouter kha se aaya
 
 app.use("/api/user",userRouter);
 
