@@ -5,7 +5,7 @@ const app = express();
 const userRouter = require('./routers/userouter');
 // db connection
 require("./models/dbconfig").dbconnection();
-
+app.use(require('morgan')("tiny"))
 //body parasor
 app.use(express.json()); // middleware for parsing json
 app.use(express.urlencoded( {extended : true} )); //middle
