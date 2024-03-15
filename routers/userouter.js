@@ -1,19 +1,16 @@
 const express = require('express')
 const router = express.Router()
+const {createUser,homeRoute} = require('../controller/controllers')
 // Require controller modules.
 
 
-router.get('/', (req, res) => {
-    // If no token, send to login page
-    res.status(200).json({ message: 'Welcome to the API' })
-});
+router.get('/', homeRoute);
+
+router.post('/create',createUser);
 
 
 
-router.post('/create', (req, res) => {
-    // If no token, send to login page
-    res.status(201).json({success:true,user:req.body })
-});
+
 router.post('/demo', (req, res) => {
     // If no token, send to login page
     res.status(201).json({success:true,user:req.body })
