@@ -21,6 +21,6 @@ const userModel = new mongoose.Schema({
     minlength:[3, "Password minimum length is 6 characters"],
     maxlength:[20, "Password maximum length is 20 characters"]
    }
-});
+},{ timestamps: true });
 
 module.exports = mongoose.model("User",userModel);
