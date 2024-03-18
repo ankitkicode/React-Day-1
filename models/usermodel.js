@@ -14,7 +14,6 @@ const userModel = new mongoose.Schema({
     lowercase:true,
     match:[/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/, "Please provide a valid email address"]
    },
-
    password:{
     type:String,
     required:[true,"Password is required"],

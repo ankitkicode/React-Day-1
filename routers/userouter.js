@@ -8,10 +8,7 @@ router.get('/', homeRoute);
 
 router.post('/create',createUser);
 
-
-
-
-router.post('/demo', (req, res) => {
+router.get('/demo', (req, res) => {
     // If no token, send to login page
     res.status(201).json({success:true,user:req.body })
 });
